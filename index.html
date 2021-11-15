@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanaka Bistro Sun</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <!--normalize-->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!--font-awesome-->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!--main css-->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!-- Inicia Nav -->
+    <nav class="navbar">
+        <div class="nav-center">
+            <!-- Inicia Header -->
+            <div class="nav-header">
+                <a href="index.html" class="nav-logo">
+                    <img src="" alt="Tanaka Bistro Sun">
+                </a>
+                <button class="nav-btn btn">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+            </div>
+            <!-- Fin Header -->
+            <!-- Links -->
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="sobre.html" class="nav-link">Contacto</a>
+                <a href="etiquetas.html" class="nav-link">Menu</a>
+                <a href="recetas.html" class="nav-link">Promociones</a>
+                <div class="nav-link contact-link">
+                    <!--Boton para el Modal-->
+                    <button onclick="document.getElementById('id01').style.display='block'" class="btn">
+                        Registrese</button>
+                    <button onclick="document.getElementById('id02').style.display='block'" class="btn">
+                        Inicie Sesion</button>
+                </div>
+                <!--Link del Carrito-->
+                <link onclick="document.getElementById('carrito').style.display='block'" class="nav-link">
+                    <article>
+                        <i class="fas fa-shopping-cart"></i>
+                            <a href="javascript:alert('carrito');">Carrito</a>
+                    </article>
+            </div>
+        </div>
+    </nav>
+    <!-- Fin Nav -->
+    <!--Inicio de Modal Inicio de Sesion-->
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <h1>Registro de Usuario</h1>
+                <p>
+                    Para poder tener una cuenta, por favor llene el formulario.
+                </p>
+                <hr>
+                <label for="email"><b>Correo Electronico</b></label>
+                <input type="text" placeholder="Ingrese su Correo Electronico" name="email" required>
+
+                <label for="password"><b>Contraseña</b></label>
+                <input type="password" placeholder="Ingrese su Contraseña" name="password" required>
+
+                <label for="password-repeat"><b>Repita su Contraseña</b></label>
+                <input type="password" placeholder="Ingrese su Contraseña" name="password-repeat" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px;">
+                    Recuerdame
+                </label>
+
+                <p>Al crearte una cuenta accedes a nuestros <a href="#" style="color: dodgerblue;">
+                Terminos y Condiciones</a>.</p>
+
+                <div class="clearfix">
+                     <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                     class="btn bt-cancel">Cancelar</button>
+                    <button type="submit" class="btn bt-registro">Registrate</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Fin de Modal Inicio de Sesion-->
+    <!--Inicio de Modal Registro-->
+    <div id="id02" class="modal">
+        <span onclick="document.getElementById('id02').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <h1>Inicia Sesion</h1>
+                <p>
+                    Para poder iniciar sesion ingrese sus datos.
+                </p>
+                <hr>
+                <label for="uname"><b>Nombre de Usuario</b></label>
+                <input type="text" placeholder="Ingrese su Nombre de Usuario" name="uname" required>
+
+                <label for="password"><b>Contraseña</b></label>
+                <input type="password" placeholder="Ingrese su Contraseña" name="password" required>
+
+                <button type="submit" class="btn bt-iSesion">Inicia Sesion</button>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px;">
+                    Recuerdame
+                </label>
+                <br>
+            </div>
+
+            <div class="container" style="background-color: #f1f1f1">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                    class="btn bt-iCancel">Cancelar</button>
+                <span class="psw">Olvidaste tu <a href="#">contraseña?</a></span>
+            </div>
+        </form>
+    </div>
+    <!--Fin del Modal de Registro-->
+    <!-- Inicia Main -->
+    <main class="page">
+        <!-- Inicio del Header-->
+        <header class="hero">
+            <div class="hero-container">
+                <div class="mySlides fade">
+                    <div class="hero-text">
+                        <h1>Un Restaurante para Cualquier Momento</h1>
+                        <h4></h4>
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="hero-text">
+                        <h1>Consulte Nuestras Promociones</h1>
+                        <h4></h4>
+                    </div>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> 
+        </header>
+        <!--Fin del Header-->
+        <!--Container Recetas-->
+        <section class="recipes-container">
+            <!--Etiquetas Container-->
+            <div class="tag-container">
+                <h4>Menu</h4>
+                <div class="lista-etiquetas">
+                    <a href="plantilla de etiquetas.html">Promociones( )</a>
+                    <a href="plantilla de etiquetas.html">Desayunos( )</a>
+                    <a href="plantilla de etiquetas.html">Comidas( )</a>
+                    <a href="plantilla de etiquetas.html">Paquetes( )</a>
+                </div>
+            </div>
+            <!--Fin de Etiquetas Container-->
+        <!--Inicia Template-->
+            <!--Inicio de Lista de Recetas-->
+            <div id="lista-platillos" class="lista-de-recetas">
+            <!--Inicio de Recetas-->
+            <!-- 1 -->
+            <a href="receta sola.html" class="alimento" data-id="1">
+                <img src="./assets/recipes/recipe-1.jpeg" alt="Alimentos"
+                class="imagen alimento-img">
+                <h5>Carne Asada</h5>
+                <p>Prep : 15min | Costo : $125 </p>
+            </a>
+            <!-- 2 -->
+            <a href="receta sola.html" class="alimento" data-id="2">
+                <img src="./assets/recipes/recipe-2.jpeg" alt="Alimentos"
+                class="imagen alimento-img">
+                <h5>Costillas</h5>
+                <p>Prep : 15min | Costo : $125 </p>
+            </a>
+            <!-- 3 -->
+            <a href="receta sola.html" class="alimento" data-id="3">
+                <img src="./assets/recipes/recipe-3.jpeg" alt="Alimentos"
+                class="imagen alimento-img">
+                <h5>Sopa de Vegetales</h5>
+                <p>Prep : 15min | Costo : $125 </p>
+            </a>
+            <!-- 4 -->
+            <a href="receta sola.html" class="alimento" data-id="4">
+                <img src="./assets/recipes/recipe-4.jpeg" alt="Alimentos"
+                class="imagen alimento-img">
+                <h5>Hot Cakes</h5>
+                <p>Prep : 15min | Costo : $125 </p>
+            </a>
+            <!--Fin de Recetas-->
+            </div>
+            <!--Fin de Lista de Recetas-->
+        </section>
+        <!--Fin de Container Recetas-->
+    </main>
+    <!-- Fin de Main -->
+    <!-- Inicia Footer -->
+    <footer class="page-footer">
+        <p>&copy; <span id="fecha"></span>
+            <span class="footer-logo">Tanaka Bistro Sun</span>
+        hecho por <a href="https://www.instagram.com/unodetantosluises/?fbclid=IwAR2yJMoptozVTZY_KFGL2f9C9NX3by5IOBfwb1hKhmHb5clih__9CMXWfbE">
+            Luis Diaz</a>
+        </p>
+    </footer>
+    <!-- Fin de Footer-->
+    <!--Inicio Firebase-->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-analytics.js";
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAKXrAmPoxA9eaT7zpcu2NzTxc75xbILI4",
+          authDomain: "tanaka-bistro-sun.firebaseapp.com",
+          databaseURL: "https://tanaka-bistro-sun-default-rtdb.firebaseio.com",
+          projectId: "tanaka-bistro-sun",
+          storageBucket: "tanaka-bistro-sun.appspot.com",
+          messagingSenderId: "158776858286",
+          appId: "1:158776858286:web:f04a5389578056ad98bf3f",
+          measurementId: "G-GD22GTEBVX",
+        };
+        //Usar Variables de Entorno al final!!!
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        // Get a reference to the database service
+        const database = getDatabase(app);
+      </script>
+      <!--Fin Firebase-->
+<!-- Inicio de Script -->
+<script src="./js/app.js"></script>
+<!-- Fin de Script -->
+</body>
+</html>

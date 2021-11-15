@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas || Starter</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <!-- normalize -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- font-awesome -->
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- ccs main -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!-- Inicia Nav -->
+    <nav class="navbar">
+        <div class="nav-center">
+            <!-- Inicia Header -->
+            <div class="nav-header">
+                <a href="index.html" class="nav-logo">
+                    <img src="./assets/logo.svg" alt="Simply Recipes">
+                </a>
+                <button class="nav-btn btn">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+            </div>
+            <!-- Fin Header -->
+           <!-- Links -->
+           <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="sobre.html" class="nav-link">Contacto</a>
+            <a href="etiquetas.html" class="nav-link">Menu</a>
+            <a href="recetas.html" class="nav-link">Mi Orden</a>
+            <div class="nav-link contact-link">
+                <!--Boton para el Modal-->
+                <button onclick="document.getElementById('id01').style.display='block'" class="btn">
+                    Registrese</button>
+                <button onclick="document.getElementById('id02').style.display='block'" class="btn">
+                    Inicie Sesion</button>
+            </div>
+            <!--Link del Carrito-->
+            <link onclick="document.getElementById('carrito').style.display='block'" class="nav-link">
+                <article>
+                    <i class="fas fa-shopping-cart"></i>
+                        <a href="javascript:alert('carrito');">Carrito</a>
+                </article>
+        </div>
+        </div>
+    </nav>
+    <!-- Fin Nav -->
+    <!-- Inicia Main -->
+    <main class="page">
+        <section class="etiquetas-wrapper">
+            <!--Inicio Etiqueta-->
+            <a href="plantilla de etiquetas.html" class="etiqueta">
+                <h5>Desayunos</h5>
+                <p>5 Platillos</p>
+            </a>
+            <!--Fin Etiqueta-->
+            <!--Inicio Etiqueta-->
+            <a href="plantilla de etiquetas.html" class="etiqueta">
+                <h5>Comidas</h5>
+                <p>7 Platillos</p>
+            </a>
+            <!--Fin Etiqueta-->
+            <!--Inicio Etiqueta-->
+            <a href="plantilla de etiquetas.html" class="etiqueta">
+                <h5>Promociones</h5>
+                <p>3 Platillos</p>
+            </a>
+            <!--Fin Etiqueta-->
+            <!--Inicio Etiqueta-->
+            <a href="plantilla de etiquetas.html" class="etiqueta">
+                <h5>Descuentos</h5>
+                <p>2 Platillos</p>
+            </a>
+            <!--Fin Etiqueta-->
+            <!--Inicio Etiqueta-->
+            <a href="plantilla de etiquetas.html" class="etiqueta">
+                <h5>Combos</h5>
+                <p>2 Platillos</p>
+            </a>
+            <!--Fin Etiqueta-->
+        </section>
+    </main>
+    <!-- Fin de Main -->
+    <!-- Inicia Footer -->
+    <footer class="page-footer">
+        <p>&copy; <span id="fecha"></span>
+            <span class="footer-logo">Tanaka Bistro Sun</span>
+        Hecho por <a href="https://www.instagram.com/unodetantosluises/?fbclid=IwAR2yJMoptozVTZY_KFGL2f9C9NX3by5IOBfwb1hKhmHb5clih__9CMXWfbE">
+            Luis Diaz</a>
+        </p>
+    </footer>
+    <!-- Fin de Footer-->
+
+<!-- Inicio de Script -->
+<script src="./js/app.js"></script>
+<!-- Fin de Script -->
+</body>
+</html>
